@@ -31,7 +31,7 @@ window.onload = function() {
     const passbox = document.getElementById("passbox");
     const password = passbox.value;
     if (!id || !password) {
-      errorSpan.textContent = "메일주소와 비밀번호를 넣어주세요.";
+      errorSpan.textContent = "Insert Mail And Password";
     } else {
       mclogin
         .login(id, password)
@@ -50,7 +50,7 @@ window.onload = function() {
           //if (error.response.status === 403) {
             let errorMsg = error.response.data.errorMessage;
             if (errorMsg === "Invalid credentials. Invalid username or password."){
-              errorSpan.textContent = "메일 또는 비밀번호가 일치하지 않습니다."
+              errorSpan.textContent = "Password or mail do not match"
             }
             else{
               errorSpan.textContent = errorMsg
