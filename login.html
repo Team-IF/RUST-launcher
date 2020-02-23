@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" style="-webkit-app-region: drag">
+  <head>
+    <script
+      src="https://kit.fontawesome.com/fe80c14db8.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <meta charset="UTF-8" />
+    <title>RUST Launcher</title>
+  </head>
+  <body>
+    <main>
+
+      <header>
+        <div class="logo">
+          <img src="./img/rust-logo.png" width="280" height="67" />
+        </div>
+        <div id="loginForm" class="whiteFont">
+          <input
+            class="darkBG whiteFont textField"
+            placeholder="Email"
+            id="idbox"
+          />
+          <input class="darkBG whiteFont textField" type="password" id="passbox" placeholder="Password" />
+
+          <div class="checkBox">
+            <input type="checkbox" id="loginsave" class="checkBox" /><span
+              >Save login Info</span
+            >
+          </div>
+          <div id="ErrorSpan"></div>
+          <button id="btnLogin" class="btn darkBG whiteFont">
+            Login
+          </button>
+        </div>
+      </header>
+    </main>
+    <script type="text/javascript" src="./js/login.js"></script>
+  </body>
+</html>
