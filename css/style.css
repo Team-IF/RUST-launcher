@@ -19,6 +19,8 @@ button {
   font-family: "DungGeunMo" !important;
 }
 
+input::-webkit-input-placeholder {font-family: "DungGeunMo" !important; }
+
 /* Main Layout*/
 main {
   float: left;
