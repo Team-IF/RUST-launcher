@@ -32,6 +32,7 @@ nav {
   height: calc(100vh - 10px);
   background-color: #252525;
   opacity: 0.9;
+  position: relative;
 }
 
 header {
@@ -70,7 +71,8 @@ header {
 .centerItem {
   display: table;
 }
-.centerItem > div {
+.centerItem > div,
+button {
   display: table-cell;
   vertical-align: middle;
 }
@@ -188,4 +190,29 @@ header {
 
 #ErrorSpan {
   font-size: 16px;
+}
+
+#btnGroup {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.logoGroup{
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin:20px;
+  margin-left: 0px;
+}
+
+
+.logoGroup i{
+  color: #cdcdcd;
+  opacity: 0.8;
+  width: 15px;
+  height: 15px;
+  margin-left: 8px;
 }
