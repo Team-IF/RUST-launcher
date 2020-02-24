@@ -211,6 +211,10 @@ button {
   margin-left: 0px;
 }
 
+.logoGroup a{
+  text-decoration: none;
+}
+
 
 .logoGroup i{
   color: #cdcdcd;
