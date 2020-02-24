@@ -21,6 +21,9 @@ const lunchGame = (accessToken, clientToken) => {
     memory: {
       max: "6000",
       min: "4000"
+    },
+    server: {
+      host:"mc.hypixel.net"
     }
   };
 
