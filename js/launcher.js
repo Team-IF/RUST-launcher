@@ -6,6 +6,7 @@ const comid = require("node-machine-id");
 const clientToken = comid.machineIdSync(true);
 
 window.onload = function() {
+    console.log(storage.getLoginInfo().uuid)
   document.getElementById("profile").src = `https://crafatar.com/avatars/${
     storage.getLoginInfo().uuid
   }?overlay`;

@@ -13,6 +13,9 @@ const lunchGame = async (accessToken, clientToken) => {
         number: "1.12.2",
         type: "release",
       },
+      server:{
+        host:"mc.hypixel.net"
+      },
       memory: {
         max: "2000",
         min: "1000"
@@ -21,9 +24,10 @@ const lunchGame = async (accessToken, clientToken) => {
 
     const launcher = new Client();
     launcher.launch(opts);
+    let log = document.getElementById("log");
 
     launcher.on('debug', (e) => console.log(e));
-    launcher.on('data', (e) => console.log(e.toString('utf-8')));
+    launcher.on('data', (e) => log.textContent = e.toString('utf-8'));
     launcher.on('error', (e) => console.log(e.toString('utf-8')));
 };
 
