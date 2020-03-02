@@ -1,38 +1,32 @@
-const { Client, Authenticator } = require("minecraft-launcher-core");
-const launcher = new Client();
-
-let accessToken, clientToken
+const { Client, Authenticator } = require('minecraft-launcher-core');
 
 
-const lunchGame = (accessToken, clientToken) => {
+const lunchGame = async (accessToken, clientToken) => {
+
+    console.log(accessToken + " " + clientToken)
 
     let opts = {
-    clientPackage: null,
-    // For production launchers, I recommend not passing
-    // the getAuth function through the authorization field and instead
-    // handling authentication outside before you initialize
-    // MCLC so you can handle auth based errors and validation!
-    authorization: Authenticator.validate(accessToken, clientToken),
-    root: "./minecraft",
-    version: {
-      number: "1.12.2",
-      type: "release"
-    },
-    memory: {
-      max: "6000",
-      min: "4000"
-    },
-    server: {
-      host:"mc.hypixel.net"
+      clientPackage: null,
+      authorization: Authenticator.refreshAuth(accessToken, clientToken),
+      root: ".minecraft/",
+      version: {
+        number: "1.12.2",
+        type: "release",
+      },
+      memory: {
+        max: "2000",
+        min: "1000"
+      }
     }
-  };
 
-  
-  launcher.launch(opts);
+    const launcher = new Client();
+    launcher.launch(opts);
 
-  launcher.on("debug", e => console.log(e));
-  launcher.on("data", e => console.log(e));
+    launcher.on('debug', (e) => console.log(e));
+    launcher.on('data', (e) => console.log(e.toString('utf-8')));
+    launcher.on('error', (e) => console.log(e.toString('utf-8')));
 };
+
 
 module.exports = {
   lunchGame

@@ -9,6 +9,7 @@
     "start": "electron ."
   },
   "dependencies": {
+    "@xmcl/core": "^2.0.2",
     "axios": "^0.19.2",
     "electron": "^8.0.1",
     "minecraft-launcher-core": "^3.12.0",

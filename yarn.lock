@@ -69,6 +69,20 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-12.12.27.tgz#d7506f73160ad30fcebbcf5b8b7d2d976e649e42"
   integrity sha512-odQFl/+B9idbdS0e8IxDl2ia/LP8KZLXhV3BUeI98TrZp0uoIzQPhGd+5EtzHmT0SMOIaPd7jfz6pOHLWTtl7A==
 
+"@xmcl/core@^2.0.2":
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/@xmcl/core/-/core-2.0.2.tgz#e947409e504f4462dffc5b50b3f0dedc6b500a8a"
+  integrity sha512-Jk3pdBdiYFtKxdcS0XkQX5f7agyd1TUwzmor2Ldiw+1zLkHSWSSKNsZlcsgNtUGmmjEzAmnXk9+nlaKBR7t+hQ==
+  dependencies:
+    "@xmcl/unzip" "^1.0.5-alpha.1"
+
+"@xmcl/unzip@^1.0.5-alpha.1":
+  version "1.0.5-alpha.1"
+  resolved "https://registry.yarnpkg.com/@xmcl/unzip/-/unzip-1.0.5-alpha.1.tgz#47c0bbfe319176a07fea3dbeecc42150b6a3c18d"
+  integrity sha512-AIDlgSK2uFXw65KnXxE2wi03UNsVKvP2VDZegskQ/Ti+NypxO9yq9z6MK4cQ5BS09zEq9lwOlAy33L0YRi5jdQ==
+  dependencies:
+    yauzl "^2.10.0"
+
 adm-zip@^0.4.13:
   version "0.4.14"
   resolved "https://registry.yarnpkg.com/adm-zip/-/adm-zip-0.4.14.tgz#2cf312bcc9f8875df835b0f6040bd89be0a727a9"
@@ -281,6 +295,11 @@ brace-expansion@^1.1.7:
   dependencies:
     balanced-match "^1.0.0"
     concat-map "0.0.1"
+
+buffer-crc32@~0.2.3:
+  version "0.2.13"
+  resolved "https://registry.yarnpkg.com/buffer-crc32/-/buffer-crc32-0.2.13.tgz#0d333e3f00eac50aa1454abd30ef8c2a5d9a7242"
+  integrity sha1-DTM+PwDqxQqhRUq9MO+MKl2ackI=
 
 buffer-from@^1.0.0:
   version "1.1.1"
@@ -728,6 +747,13 @@ fd-slicer@~1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/fd-slicer/-/fd-slicer-1.0.1.tgz#8b5bcbd9ec327c5041bf9ab023fd6750f1177e65"
   integrity sha1-i1vL2ewyfFBBv5qwI/1nUPEXfmU=
+  dependencies:
+    pend "~1.2.0"
+
+fd-slicer@~1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/fd-slicer/-/fd-slicer-1.1.0.tgz#25c7c89cb1f9077f8891bbe61d8f390eae256f1e"
+  integrity sha1-JcfInLH5B3+IkbvmHY85Dq4lbx4=
   dependencies:
     pend "~1.2.0"
 
@@ -1946,3 +1972,11 @@ yauzl@2.4.1:
   integrity sha1-lSj0QtqxsihOWLQ3m7GU4i4MQAU=
   dependencies:
     fd-slicer "~1.0.1"
+
+yauzl@^2.10.0:
+  version "2.10.0"
+  resolved "https://registry.yarnpkg.com/yauzl/-/yauzl-2.10.0.tgz#c7eb17c93e112cb1086fa6d8e51fb0667b79a5f9"
+  integrity sha1-x+sXyT4RLLEIb6bY5R+wZnt5pfk=
+  dependencies:
+    buffer-crc32 "~0.2.3"
+    fd-slicer "~1.1.0"

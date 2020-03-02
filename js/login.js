@@ -42,6 +42,7 @@ window.onload = function() {
             res.data.clientToken,
             res.data.selectedProfile.name,
             res.data.selectedProfile.id,
+            password,
             checked
           );
           location.href = "./main.html";
